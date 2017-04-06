@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ひな形</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+  </head>
+  <body>
+    <header>
+      <h1>HTMLのひな形</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="./">ホーム</a>
+        </li>
+        <li>
+          <a href="./rule.html">ルール</a>
+        </li>
+        <li>
+          <a href="./tutorial.html">チュートリアル</a>
+        </li>
+        <li>
+          <a href="./guideline.html">ガイドライン</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <main>
+        <section>
+          <h1>このページについて</h1>
+          <p>
+            このページはHTMLファイルを新たに作る時のひな形として利用できるページです。
+          </p>
+        </section>
+
+        <section>
+          <h1>HTMLファイルを書く時のガイドライン</h1>
+          <h2>ドキュメントタイプ宣言を必ず最初に書く</h2>
+          <pre>
+            <code>
+
+              &lt;!DOCTYPE html&gt;
+            </code>
+          </pre>
+          <p>
+            &lt;!DOCTYPE html&gt;をドキュメントタイプ宣言と呼びます。このファイルがHTML5のファイルだよ、ということを表示するブラウザに教えるための宣言です。必ずファイルの先頭に一度だけ書きます。
+          </p>
+
+          <h2>タグは半角の小文字で書きましょう</h2>
+          <p>
+            <pre>
+              <code>
+
+                ◯
+                &lt;section&gt;
+                    &lt;p&gt;タグは半角の小文字で書きます&lt;/p&gt;
+                &lt;/section&gt;
+
+                ×
+                &lt;SECTION&gt;
+                    &lt;P&gt;大文字でもエラーにはなりませんがわざわざ大文字で書くこともないでしょう&lt;/P&gt;
+                &lt;/SECTION&gt;
+
+                ×
+                &lt;section&gt;
+                    &lt;ｐ&gt;ちなみに全角でかくとHTMLタグとして認識してくれません！&lt;/ｐ&gt;
+                &lt;/section&gt;
+              </code>
+            </pre>
+            タグに使うのは、半角小文字の英数字です。大文字、あるいは全角文字は使いません。
+          </p>
+
+          <h2>終わりのタグは必ず書きましょう</h2>
+          <pre>
+            <code>
+              ◯
+              &lt;section&gt;
+                  &lt;p&gt;sectionもpも初めと終わりのセットです。&lt;/p&gt;
+              &lt;/section&gt;
+
+              ×
+              &lt;section&gt;
+                  &lt;p&gt;pの終わりのタグがありません！またsectionの終わりのタグに、/（スラッシュ）がありません！
+              &lt;section&gt;
+            </code>
+          </pre>
+          <p>
+            ルールにも書いたとおり、基本的にはタグは文章を囲って使います。初めと終わりのセットで使います。
+          </p>
+
+          <h2>囲まれた要素は頭にスペース（インデント）を入れましょう</h2>
+          <pre>
+            <code>
+
+              ◯
+              &lt;section&gt;
+                  &lt;p&gt;sectionに囲まれている部分はスペースで１段下げます。&lt;/p&gt;
+                  &lt;p&gt;sectionの中にpタグが２つあるなら、２つ目も頭を揃えます。&lt;/p&gt;
+              &lt;/section&gt;
+
+              ×
+              &lt;section&gt;
+              &lt;p&gt;インデントしないと、どのタグがどのタグに含まれるか分からない。&lt;/p&gt;
+              &lt;/section&gt;
+            </code>
+          </pre>
+          <p>
+            タグで囲んだ時、囲まれた要素はそのタグの中にあることが見て分かるように、頭にスペースを入れます。スペースはtabキーで入れるといいでしょう。<br>
+            頭にスペースを入れて先頭をずらすことを「インデントする」などと言います。字下げしてできた空白のこともインデントと呼びます。
+          </p>
+
+          <h2>HTMLファイル内の不要な空白と改行は無視されます</h2>
+          <pre>
+            <code>
+
+              &lt;section&gt;
+                  &lt;p&gt;
+                      た           く           さ           ん          スペースを入れても&lt;br&gt;
+                      た
+                      く
+                      さ
+                      ん
+                      改
+                      行
+                      し
+                      て
+                      も&lt;br&gt;
+                      たくさんのスペース、改行は無視されてスペース一つ分だけ間が空きます。
+                  &lt;/p&gt;
+              &lt;/section&gt;
+
+              ↓
+
+              た く さ ん スペースを入れても
+              た く さ ん 改 行 し て も
+              たくさんのスペース、改行は無視されてスペース一つ分だけ間が空きます。
+            </code>
+          </pre>
+          <p>
+            HTMLファイルでは見やすいようにインデントをしましょうといいました。HTMLファイルでは、ブラウザでの表示時に、不要なタブ、半角スペースは無視されます。またいくらHTMLファイル内で改行しても、その改行も無視されます。改行をするにはbrタグを、スペースを複数入れたい場合には全角スペースを使うか、「&amp;nbsp;」使いましょう。
+          </p>
+          <p>
+            では自由な配置で文章を書きたい場合どうすればよいでしょうか。その場合には<ruby>pre<rt>プレ</rt></ruby>タグを使います。preタグ内ではHTMLファイルで書いた通りの配置で文章が表示されます。
+          </p>
+
+          <h2>タグによっては中に属性を指定できます</h2>
+
+          <pre>
+            <code>
+
+              &lt;img src="./images/tech_log.png"&gt;
+            </code>
+          </pre>
+
+          <p>
+            <ruby>&lt;img&gt;<rt>イメージ</rt></ruby>タグは<ruby>src<rt>ソース</rt></ruby>という属性を設定可能です。srcには、画像のURLを指定します。
+          </p>
+
+          <p>
+            属性の書き方は、
+            <pre>
+              <code>
+
+                &lt;タグ名 属性名="属性値"&gt;
+              </code>
+            </pre>
+            です。以下の×の書き方は、何が悪いのか当ててみましょう。
+          </p>
+
+          <pre>
+            <code>
+
+              ◯ &lt;img src="./images/tech_logo.png"&gt;
+
+              × &lt;imgsrc="./images/tech_logo.png"&gt;
+
+              × &lt;img SRC="./images/tech_logo.png"&gt;
+
+              × &lt;img src=./images/tech_logo.png&gt;
+
+              × &lt;img    src    =     "    ./images/tech_logo.png    "    &gt;
+            </code>
+          </pre>
+
+
+
+        </section>
+      </main>
+
+      <aside>
+        <img id="avatar" src="./images/tech_avatar.png">
+        <h1>Techゼミナールとは</h1>
+        <p>
+          やりたいことをやって輝く自分になることを目標とする、プログラミングのチーム学習を通して未来を切り拓く力を身に付けるをコンセプトとした小中学生向けのIT教室です。
+        </p>
+      </aside>
+    </div>
+
+    <footer>
+      <img src="./images/tech_logo.png">
+    </footer>
+
+    <script type="text/javascript" src="./script.js"></script>
+  </body>
+</html>

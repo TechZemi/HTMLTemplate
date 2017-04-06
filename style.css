@@ -1,0 +1,26 @@
+/* CSSはHTMLで構造化した文章に、装飾するための指示です */
+
+/* これ（半角の／* *／で囲んである部分）は人が読むためのコメントです */
+/* 装飾の指示としては使われません                               */
+
+html, body { margin:0; padding:0; }
+
+header h1 { text-align: center; }
+
+nav { border-top:1px solid #000000; border-bottom:1px solid #000000; }
+nav ul { padding:0; text-align:center;  }
+nav li { display:inline; margin:0 10px;  }
+
+.container { display:flex; flex-flow:row; width:900px; margin:0 auto; padding:10px; }
+.container main { flex:1 1 80%; border-radius:5px; background:#f0f0f0; margin-right:15px; padding:10px; }
+.container aside { flex:1 1 20%; border-radius:5px; background:#f0f0f0; padding:10px; }
+
+.container main section { border-bottom: 1px solid #ffffff; }
+.container main section h2 { border-left: 5px solid #000000; border-bottom: 1px solid #000; padding-left:10px; }
+
+#avatar { width:150px; }
+.container aside h1 { font-size:1em; }
+
+pre { border-radius:5px; background:#ffffff; }
+
+footer { background:#888888; }

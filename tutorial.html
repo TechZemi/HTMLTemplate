@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ひな形</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+  </head>
+  <body>
+    <header>
+      <h1>HTMLのひな形</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="./">ホーム</a>
+        </li>
+        <li>
+          <a href="./rule.html">ルール</a>
+        </li>
+        <li>
+          <a href="./tutorial.html">チュートリアル</a>
+        </li>
+        <li>
+          <a href="./guideline.html">ガイドライン</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <main>
+        <section>
+          <h1>このページについて</h1>
+          <p>
+            このページはHTMLファイルを新たに作る時のひな形として利用できるページです。
+          </p>
+        </section>
+
+        <section>
+          <h2>クエスト①：まずは普通に文章を書いてみよう</h2>
+          
+          <p>
+            普通に書いた文章がどの様に表示されるかを確かめよう。<br>
+            下のpタグの中に、今までやって面白かったゲームについて３行ぐらいの文章を書いてみよう。<br>
+            <br>
+            ただし、以下のものを必ず使うこと！
+            <ul>
+              <li>漢字</li>
+              <li>ひらがな</li>
+              <li>カタカナ</li>
+              <li>アルファベット</li>
+              <li>数字</li>
+              <li>顔文字</li>
+              <li>絵文字</li>
+              <li>半角スペース</li>
+              <li>全角スペース</li>
+              <li>半角スペースの連続</li>
+              <li>全角スペースの連続</li>
+              <li>tabキーによる空白</li>
+              <li>改行</li>
+              <li>改行の連続</li>
+              <li>色んな記号</li>
+            </ul>
+          </p>
+
+          <hr>
+
+          <p><!--  ここから下に書く -->
+
+
+                        
+          </p><!-- ここより上に書く -->
+
+          <hr>
+
+          <h2>クエスト②：上で書いた文章にタイトルを付けよう</h2>
+
+          <p>
+            タイトルを付けるためのタグとして&lt;h1&gt;〜&lt;h6&gt;が用意されています。教科書や本などは、
+            第１章、第２節、第１項という風に文章が区切られていますが、これらの見出し（英語で<ruby>Headline<rt>ヘッドライン</rt></ruby>）
+            のために用意されています（数字が小さい方がより上の階層を表します）。
+          </p>
+
+          <h2>クエスト③：&lt;p&gt;と&lt;br&gt;の役割は？</h2>
+
+          <p>
+            以下に上ので書いた文章を&lt;p&gt;タグごとコピー（Ctrl+C）し、３つほどペースト（Ctrl+V）してみよう。
+          </p>
+
+          <hr><!-- ここから下にペースト -->
+
+
+                        
+          <hr><!-- ここより上にペースト -->
+
+          <p>
+            ３つペーストできたら、どんな風に表示されているか観察してみよう。そしてその文章の中のどこかの「。」の後ろで、&lt;br&gt;を使ってみよう。
+            表示がどう変わるか観察してみよう。
+          </p>          
+
+          <p>
+            &lt;p&gt;は<ruby>Paragraph<rt>パラグラフ</rt></ruby>、のP、&lt;br&gt;は（Line）<ruby>Break<rt>ブレイク</rt></ruby>のBRです。どういう意味か当ててみよう。
+          </p>
+
+          <h2>クエスト④：画像を表示してみよう</h2>
+
+          <p>
+            画像を表示するには<ruby>&lt;img&gt;<rt>イメージ</rt></ruby>タグを使います。&lt;img&gt;タグは<ruby>src<rt>ソース</rt></ruby>という「属性」を指定する必要があります。表示する画像のありかを指定します。  
+          </p>
+
+          <p>
+            画像のありかはURLで指定します。
+          </p>
+          
+
+          <h2>クエスト⑤：色んなWebページの裏側を覗いてみよう</h2>
+
+          気になったタグは<a href="http://www.htmq.com/html5/index.shtml" target="_blank">このサイト</a>で調べてみよう。
+
+        </section>
+      </main>
+
+      <aside>
+        <img id="avatar" src="./images/tech_avatar.png">
+        <h1>Techゼミナールとは</h1>
+        <p>
+          やりたいことをやって輝く自分になることを目標とする、プログラミングのチーム学習を通して未来を切り拓く力を身に付けるをコンセプトとした小中学生向けのIT教室です。
+        </p>
+      </aside>
+    </div>
+
+    <footer>
+      <img src="./images/tech_logo.png">
+    </footer>
+
+    <script type="text/javascript" src="./script.js"></script>
+  </body>
+</html>

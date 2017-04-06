@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ひな形</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+  </head>
+  <body>
+    <header>
+      <h1>HTMLのひな形</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="./">ホーム</a>
+        </li>
+        <li>
+          <a href="./rule.html">ルール</a>
+        </li>
+        <li>
+          <a href="./tutorial.html">チュートリアル</a>
+        </li>
+        <li>
+          <a href="./guideline.html">ガイドライン</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <main>
+        <section>
+          <h1>このページについて</h1>
+          <p>
+            このページはHTMLファイルを新たに作る時のひな形として利用できるページです。
+          </p>
+        </section>
+
+        <section>
+          <h1>HTMLの３つの基本的ルール</h1>
+          <h2>ルール①</h2>
+          <p>
+            <strong>HTMLファイルはタグ（&lt;と&gt;で囲んである指示子）を組み合わせて作ります</strong>。
+            タグはあらかじめ用意されたものを使います。自分で&lt;techzemi&gt;など作っても何も起きません（特にエラーにもなりません）。
+          </p>
+
+          <h2>ルール②</h2>
+          <p>
+            タグには基本的に、<strong>初めのタグ&lt;p&gt;と終わりのタグ&lt;/p&gt;があります</strong>。
+            タグで表示したい文章を囲むことで、囲った文章に意味を付けます。
+            改行の&lt;br&gt;や画像を表示する&lt;img src="./hoge.png"&gt;など、一つだけのダグもあります
+          </p>
+
+          <h2>ルール③</h2>
+          <p>
+            <strong>&lt;head&gt;タグ内に書いたことは、Webブラウザのための情報で、画面上には表示されません</strong>。ハガキで言えばおもて面です。
+          </p>
+          <p>
+            <strong>&lt;body&gt;タグ内に書いたことが、Webブラウザの画面上に表示されます</strong>。ハガキで言えば裏面の本文です（メールも本文はbodyといいますね）。
+          </p>
+        </section>
+      </main>
+
+      <aside>
+        <img id="avatar" src="./images/tech_avatar.png">
+        <h1>Techゼミナールとは</h1>
+        <p>
+          やりたいことをやって輝く自分になることを目標とする、プログラミングのチーム学習を通して未来を切り拓く力を身に付けるをコンセプトとした小中学生向けのIT教室です。
+        </p>
+      </aside>
+    </div>
+
+    <footer>
+      <img src="./images/tech_logo.png">
+    </footer>
+
+    <script type="text/javascript" src="./script.js"></script>
+  </body>
+</html>
